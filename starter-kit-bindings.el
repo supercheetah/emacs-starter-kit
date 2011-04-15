@@ -39,8 +39,12 @@
 (global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Some of us are used to the PC selection mode for marking a region.
+(if (fboundp 'pc-selection-mode)
+    (pc-selection-mode)
+  (require 'pc-select))
+
 ;; Window switching. (C-x o goes to the next window)
-(windmove-default-keybindings) ;; Shift+direction
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
 (global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
