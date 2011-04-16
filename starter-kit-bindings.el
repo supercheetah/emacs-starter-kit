@@ -45,6 +45,7 @@
   (require 'pc-select))
 
 ;; Window switching. (C-x o goes to the next window)
+(windmove-default-keybindings 'meta)
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
 (global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
