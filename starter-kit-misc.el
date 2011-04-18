@@ -117,7 +117,8 @@
     (add-to-list 'grep-find-ignored-files "*.class")))
 
 ;; Default to unified diffs
-(setq diff-switches "-u -w")
+(setq diff-switches "-u -w"
+      magit-diff-options "-w")
 
 ;; Cosmetics
 
